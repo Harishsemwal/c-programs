@@ -1,0 +1,854 @@
+
+Name- Harish Prasad Semwal
+Code in C languages
+
+/*write a programe to find the absolute value of number enterd through the keyboard.*/
+#include<stdio.h>
+int main()
+{
+    float N,n;
+    printf("Enter The Number");
+    scanf("%f",&N);
+    if(N>0)
+    {
+        printf("%f",N);
+    }
+    else if(N<0)
+    {
+        n=(-1)*N;
+        printf("%f",n);
+    }
+    else if(N==0)
+    {
+        printf("%f",N);
+    }
+    return 0;
+}
+/*Given the length and breadth of  */
+#include<stdio.h>
+int main()
+{
+    int length=5,breadth=4,area,perimeter;
+    area=length*breadth;
+    perimeter=2*(length+breadth);
+    if(perimeter>area)
+    {
+        printf("Yes!! The perimeter is Grater than area:%d",perimeter);
+    }
+    else{
+        printf("The area %d is Grater than perimeter %d",area,perimeter);
+    }
+    return 0;
+}/*WACP to print all the ASCII value and their equivalent character using
+while loop. The ASCII value vary form 0 to 255. */ 
+#include <stdio.h>
+int main(){
+    int i;
+    char ascii;
+for(i=1;i<=255;i++)
+{ printf("%c=%d\n",i,i);
+ }
+    return 0;
+/*WACP to print all the ASCII value and their equivalent character using
+while loop. The ASCII value vary form 0 to 255. */ 
+#include <stdio.h>
+int main()
+{
+    int i;
+    while(i<=255)
+    {
+        printf("%c:%d\n",i,i);
+        i++;    
+    }
+    return 0;
+}
+/*Temprature of city in Fahrenheit degrees is input through the keyboard.
+ write a programe to convert this Temprature into Centigrated degrees.*/
+ //if Fahrenheit to Centigrated = (5/9*Centigrated)+32
+ //if Centigrated to Fahrenheit = (5/9*Fahrenheit)-32
+
+ #include<stdio.h>
+ int main()
+ {
+    float Fahrenheit,Centigrated;
+    printf("Please Enter thr Temprature of City:");
+    scanf("%f",&Fahrenheit);
+    Centigrated=(5/9*Fahrenheit)-32;
+    printf("The Temprature in Centigrated is:%f\n",Centigrated);
+    return 0;
+ }
+/*Write a programe to enter the user wants. At the end it should display the count of positive,negative and zeros entered.*/
+ #include <stdio.h>
+
+int main()
+
+{ char ch;
+
+int i,n=0,p=0,z=0;
+
+do
+
+{
+
+printf("Enter an integer: \n");
+
+scanf("%d",&i);
+
+if(i>0)
+
+p++;
+
+else if(i<0)
+
+n++;
+
+else
+
+z++;
+
+printf("Do you want to continue? y/n \n");
+
+scanf(" %c",&ch);
+
+}while(ch=='y' || ch=='Y');
+
+printf("Count of +ve , -ve and zeroes entered are %d , %d and %d respectively.",p,n,z);
+
+return 0;
+
+}/*Consider a Character system in which there are notes of six denominations,Rs.1,Rs.2,Rs.5,Rs.10,Rs.50,Rs.100.if a sum of Rs.N is entered through the keyboard,write a programe to compute the smallest number of Notes that will combine to give Rs.N.*/
+#include<stdio.h>
+int main()
+{
+    int ammount,a,b,c,d,e,f,total;
+    printf("Enter The ammount:");
+    scanf("%d",&ammount);
+    a=ammount/100;
+    ammount=ammount%100;
+    b=ammount/50;
+    ammount=ammount%50;
+    c=ammount/10;
+    ammount=ammount%10;
+    d=ammount/5;
+    ammount=ammount%5;
+    e=ammount/2;
+    ammount=ammount%2;
+    f=ammount/1;
+    ammount=ammount%1;
+    total=a+b+c+d+e+f;
+    printf("Smallest Number Of Notes:%d\n",total);
+    return 0;
+}/* the Distance Between Two cities (in Km) is input through the keyboard.Write
+ a programe to convert and print this distance in meters,feet,inches and
+ centemeter.*/
+#include<stdio.h>
+int main()
+{
+    float distance,meter,feet,inches,centemeter;
+    printf("Enter the distance between Two citys in km citys is:");
+    scanf("%f",&distance);
+    meter=distance*1000;
+    centemeter=meter*100;
+    inches=centemeter/2.54;
+    feet=inches/12;
+    printf("The distance between two city in km:%f\n",distance);
+    printf("The distance between two city in meter:%f\n",meter);
+    printf("The distance between two city in centemeter:%f\n",centemeter);
+    printf("The distance between two city in feet:%f\n",feet);
+     printf("The distance between two city in inches:%f\n",inches);
+    return 0;
+}
+   /*while purchasing certain items,a discount of 10% is offered if the quantity 
+purchesed is more than 1000. if quantity and price per atom are input through the
+keyboard,write a programe to calculate the total expenshive.*/
+#include<stdio.h>
+int main()
+{
+    float quantity,discount,price,Totalprice,Totalprice1;
+    printf("Enter the quantity of per item:");
+    scanf("%f",&quantity);
+    printf("Enter the price of per item:");
+    scanf("%f",&price);
+    Totalprice=quantity*price;
+    if(quantity>=1000)
+    {
+    Totalprice1=Totalprice-Totalprice*10/100;
+    printf("The Totalprice is:%f",Totalprice1);
+    }
+    else
+    {
+        printf("The Total price is:%f",Totalprice);
+    }
+    return 0;
+}/*Any integar input throught the keyboard write a progrmae to find out whether it 
+is an odd number or even number.*/
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("please Enter The number:");
+    scanf("%d",&num);
+    if(num/2==0)
+    {
+        printf("Number is even Number");
+    }
+    else
+    {
+        printf("Number is odd Number");
+    }
+    return 0;
+}/*write a programe to find The factorial Value of N number enterend Through
+the keyboard.*/
+#include<stdio.h>
+int main()
+{
+   int num,fact,i;
+   printf("Enter the Number:");
+   scanf("%d",&num);
+   fact=i=1;
+   while(i<=num)
+   {
+       fact=fact*i;
+       i++;
+   }
+   printf("The factorial Value %d : %d",num,fact);
+   return 0;
+}/*write a programe to find a Factorial Value of any number enter through the Keyboard.*/
+#include<stdio.h>
+int main()
+{
+	int fact,i,num;
+	printf("Enter The Number");
+	scanf("%d",&num);
+	fact=i=1;
+	while(i<=num)
+	{
+		fact=fact*i;
+		i++;
+	}
+	printf("The Number is %d and factorial is:%d",num,fact);
+	return 0;
+}/*if lenght of threee side of tringle are input through the keyboard,
+write a programe to find the area of the tringle.
+//wrtten by-Harish Semwal*/
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a,b,c,s,area;
+    printf("Enter the three different input of tringle:");
+    scanf("%f %f %f",&a,&b,&c);
+    s=(a+b+c)/2;
+    area=sqrt(s*(s-a)*(s-b)*(s-c));
+  printf("The area of tringle is:%f\n",area);
+    return 0;
+}/*if lenght of threee side of tringle are input through the keyboard,
+write a programe to find the area of the tringle.
+//wrtten by-Harish Semwal*/
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a,b,c,s,area;
+    printf("Enter the three different input of tringle:");
+    scanf("%f %f %f",&a,&b,&c);
+    s=(a+b+c)/2;
+    area=sqrt(s*(s-a)*(s-b)*(s-c));
+  printf("The area of tringle is:%f\n",area);
+    return 0;
+}//Leap Year or Not using Operators.
+#include<stdio.h>
+int main()
+{
+	int Year;
+	printf("Enter The Year:");
+	scanf("%d",&Year);
+	if(Year%400==0||Year%100!=0&&Year%4==0)
+	{
+		printf("Year Is Leap Year");
+	}
+	else
+	{
+		printf("Year Is Not a Leap Year");
+	}
+}/*The Marks optained by student in 5 different subject are input throught the keyboard 
+The student gets a division as per the Following rules.
+percentage above or equal 60-Frist Devision.
+persentage between 50 and 59-Secound Devision.
+persentage between 40 and 49-Third Devision.
+persentage less than 40- fail*/
+#include<stdio.h>
+int main()
+{
+	int a,b,c,d,e,sum,persentage;
+	printf("Enter The Five Subject");
+	scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+	sum=a+b+c+d+e;
+	persentage=sum/5;
+	printf("The persentage of Five subject is:%d\n",persentage);
+	printf("The Sum of Five Subject is:%d\n",sum);
+	if(persentage>=65)
+	{
+		printf("Frist Devidion");
+	}
+	else if(persentage>=50&&persentage<=59)
+	{
+		printf("Secound Devision");
+	}
+	else if(persentage>=40&&persentage<=49)
+	{
+		printf("Third Devision");
+	}
+	else if(persentage<40)
+	{
+		printf("fail");
+	}
+	return 0;
+ }/* Nested if/Else condition problem:if cost price and selling price of an item is input through
+the keyboard, write a programe to determine whether the seller has made profit or inncurred loss.
+also determine how much profit he made or loss he incurred.*/
+#include<stdio.h>
+int main()
+{
+    float costprice,sellingprice,profit,loss;
+    printf("Enter The cost price of an item:");
+    scanf("%f",&costprice);
+    printf("Enter The selling price of an item:");
+    scanf("%f",&sellingprice);
+     loss=costprice-sellingprice;
+     profit=sellingprice-costprice;
+    if(sellingprice>costprice)
+    printf("The profit of an item is:%f\n",profit);
+    if(sellingprice<costprice)
+    {
+        printf("The loss of an item is:%f\n",loss);
+    }
+    if(sellingprice==costprice)
+    {
+        printf("No profit!! and No loss!!");
+    }
+    return 0;
+}/****************************************************************************************
+Write a program for a matchstick game being played between the computer and a user your
+program should ensure that the computer always wins rules for the game are as follows.
+-- There are 21 matchsticks.
+-- The computer asked the player to pick 1 2 3 or 4 or match sticks.
+-- After the person picks the computer does it peaking.
+-- Whoever is forced to pick up the last matchstick loses the game.
+*****************************************************************************************/
+#include<std>
+int main()
+{
+    int match_sticks = 21, user_choice, computer_choice;
+    while(match_sticks>=1)
+    {
+        printf("Total Match Sticks: %d\n", match_sticks);
+        printf("Pick up the match sticks between (1 to 4): ");
+        scanf("%d", &user_choice);
+
+        if(user_choice>4)
+        {
+            printf("Invalid Entry");
+            break;
+        }
+
+        //for computer choice we are taking maximum value by which
+        //we can get the max possible value of sticks which is 5
+        computer_choice = 5 - user_choice;
+        //with the help of this code we will take only 4 rounds to decide that user loses the match.
+        printf("Computer picks up the %d match sticks.\n", computer_choice);
+        match_sticks = match_sticks-user_choice-computer_choice;
+        if(match_sticks==1)
+        {
+            printf("\nYou have been lost via computer.");
+            break;
+        }
+    }
+    return(0);
+}//Write a program to receive an integer and find its octal equivalent.
+#include<stdio.h>
+int main()
+{
+    int num,r,res=0,oct=0,flag=0;
+    printf("Enter the integar:");
+    scanf("%d",&num);
+    r=num;
+    while(r!=0)
+    {
+        res=res*10+r%8;
+        if(res==0)
+        {
+            flag=1;
+        }
+        r=r/8;
+    }
+    while(res!=0)
+    {
+        oct=oct*10+res%10;
+        res=res/10;
+    }
+    if(flag==1)
+    {
+        oct=oct*10;
+    }
+    {
+    printf("The octal of %d is %d",num,oct);
+    }
+    return 0;
+}/*The length and breadth of rectangle and redius of a circle are input through the keyboard.
+write a programe to calculate the area and perimeter of the rectangle,and the area and 
+circumference of the circle.*/
+
+#include<stdio.h>
+int main()
+{
+    int length,breadth,area,radius;
+    float PI=3.142,area_circle;
+    printf("Enter The length perimeter of The rectangle:");
+    scanf("%d",&length);
+    printf("Enter The breadth perimeter of The rectangle:");
+    scanf("%d",&breadth);
+    printf("Enter the radius of Circle:");
+    scanf("%d",&radius);
+    area=length*breadth;
+    area_circle=PI*radius*radius;
+    printf("the area and perimeter of the rectangle:%d\n",area);
+    printf("the area and circumference of the circle:%f\n",area_circle);
+    return 0;
+}#include<stdio.h>
+int main()
+{
+    float x,y;
+    printf("Enter The Value of (x,y):");
+    scanf("%f %f",&x,&y);
+    if(x==0&&y==0)
+    {
+        printf("The point is on origen");
+    }
+    else if(x==0)
+    {
+        printf("Point on the Y-axix");
+    }
+    else if(y==0)
+    {
+        printf("point is the X-axix");
+    }
+    else
+    {
+        printf("The point is nither X-axix nor Y-axix");
+    }
+    return 0;
+}/*Two number are Enter Through the keyboard write a progrmame to find the Value of one
+number raised to the power of another*/
+#include<stdio.h>
+int main()
+{
+	float x,power;
+	int y,i;
+	printf("Enter Two Numbers:");
+	scanf("%f %d",&x,&y);
+	power=i=1;
+	while(i<=y)
+	{
+		power=power*x;
+		i++;
+	}
+	printf("%f to the power %d is %f\n",x,y,power);
+	return 0;
+}/*Two number are entered through the keyboard. Write a programe to find the Value of one number raised
+to the power of another.*/
+#include<stdio.h>
+int main()
+{
+    int power,a,b,i;
+    printf("Enter the Two different number:");
+    scanf("%d%d",&a,&b);
+    power=i=1;
+    while(i<=b)
+    {
+        power=power*a;
+        i++;
+    }
+    printf("%d the power %d is:%d",a,b,power);
+   return 0;
+}/*Write a program to find the range of a set of number entered through the keyboard range is
+the difference between the smallest and biggest number in the  list*/
+#include<stdio.h>
+int main()
+{
+    int small,big,range,num,limit;
+    printf("Enter the limit:");
+    scanf("%d",&limit);
+    printf("Enter %d number:",limit);
+    scanf("%d",&num);
+    small=big=num;
+    limit=limit-1;
+    while(limit)
+    {
+        scanf("%d",&num);
+        if(num>big)
+        {
+            big=num;
+        }
+        if(num>small)
+        {
+            big=small;
+        }
+        limit--;
+    }
+    range=big-small;
+    printf("small num:%d\n",big);
+    printf("Range is %d\n",range);
+    return 0;
+}/*if a five number is input through the Keyboard,write a programe to reverse the Number.*/
+#include<stdio.h>
+int main()
+{
+    int n,n1,n2,n3,n4,n5,reverse;
+    printf("Enter The Five diffrent Number:");
+    scanf("%d",&n);
+    n5=n%10;
+    n=n/10;
+    n4=n%10;
+    n=n/10;       
+    n3=n%10;
+    n=n/10;
+    n2=n%10;
+    n=n/10;
+    n1=n%10;
+    n=n/10;
+    reverse=n5*10000+n4*1000+n3*100+n2*10+n1*1;
+    printf("The reverse Number is:%d\n",reverse);
+    return 0;
+}/*If a charchter is entered Through the keyboard,write a programe to determine whether
+the charchter is capital latter small case latter ,a digit or a special symbol.*/
+#include<stdio.h>
+int main()
+{
+	int ch;
+	printf("Enter The Chachter");
+	scanf("%c",&ch);
+	if(ch>=65&&ch<=90)
+	{
+		printf("Character & Capital Latter");
+	}
+	else if(ch>=97&&ch<=122)
+	{
+		printf("Character & Small Latter");
+	}
+	else if(ch>=48&&ch<=57)
+	{
+		printf("it is Number");
+	}
+	else
+	{
+		printf("Special Symbol");
+	}
+	return 0;
+}/* Given Three Points (x1,y1),(x2,y2) and (x3,y3),write a programe to cheak, if the three Points 
+fall on one Straigth line.*/
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int x1,x2,x3,y1,y2,y3;
+    float AB,BC,AC;
+    printf("Enter The Frist Two co-ordinate");
+    scanf("%d %d",&x1,&y1);
+    printf("Enter The Frist Two co-ordinate");
+    scanf("%d %d",&x2,&y2);
+    printf("Ender The Frist Two co-ordinate");
+    scanf("%d %d",&x3,&y3);
+    AB= sqrt(pow(x1-x2,2)+(pow(y2-y1,2)));
+    BC= sqrt(pow(x2-x3,2)+(pow(y2-y1,2)));
+    AC= sqrt(pow(x3-x1,2)+(pow(y3-y1,2)));
+    printf("The AB:%f\n and BC:%f\n and AC:%f\n",AB,BC,AC);
+    if(AC==AB+BC)
+    {
+        printf("AB+BC=AC");
+        printf("Three Points Fall on One straight line");
+    }
+    else{
+        printf("Three Points Is not One straight line");
+    }
+    return 0;
+}//write a programe to sum of Even Number Number 1 to N.
+#include<stdio.h>
+int main()
+{
+    int i,num;
+    int sum=0;
+    printf("Enter the Value of Last Term OF Number:");
+    scanf("%d",&num);
+    for(i=0;i<=num;i+=2)
+    {
+        sum=sum+i;
+    }
+    {
+    printf("%d\n",sum);
+    }
+    return 0;
+}/*if a five digit number input through the keyboard write a progrme to calculate
+the sum of its digit.(Hint:Use the modulus operator %)*/
+#include<stdio.h>
+int main()
+{
+    int a,b,c,d,e,sum;
+    printf("Enter The five different number:");
+    scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+    sum=a+b+c+d+e;
+    a=a%sum;
+    b=b%sum;
+    c=c%sum;
+    d=d%sum;
+    e=e%sum;
+    printf("The Sum of Five Number is:%d",sum);
+    return 0;
+}   //write a programe to sum of natural Number 1 to N.
+#include<stdio.h>
+int main()
+{
+    int i,num;
+    int sum=0;
+    printf("Enter the Value of Last Term:");
+    scanf("%d",&num);
+    for(i=1;i<=num;i++)
+    {
+        sum=sum+i;
+    }
+    {
+    printf("%d\n",sum);
+    }
+    return 0;
+}//write a programe to sum of Even Number Number 1 to N.
+#include<stdio.h>
+int main()
+{
+    int i,num;
+    int sum=0;
+    printf("Enter the Value of Last Term OF Number:");
+    scanf("%d",&num);
+    for(i=1;i<=num;i+=2)
+    {
+        sum=sum+i;
+    }
+    {
+    printf("%d\n",sum);
+    }
+    return 0;
+}#include<stdio.h>
+int main()
+{
+    int C,D,Temp;
+    printf("Enter Your frist Number C:");
+    scanf("%d",&C);
+    printf("Enter Your Secound Number D:");
+    scanf("%d",&D);
+    Temp=C;
+    C=D;
+    D=Temp;
+    printf("After Interchange The Number C:%d\n",C);
+    printf("After Interchange The Number D:%d\n",D);
+    return 0;
+}/*write a programe to cheak whether a tringle is valid or not, if three angles of the tringle
+are enterd through the keyboard. A tringle is valid if the sum of all three angles is equal to
+180 dgress.*/
+#include<stdio.h>
+int main()
+{
+    int a,b,c,s;
+    printf("Enter The Three angles of tringle:");
+    scanf("%d %d %d",&a,&b,&c);
+    s=a+b+c;
+    if(s==180)
+    {
+        printf("The tringle is valid");
+    }
+    else
+    {
+        printf("the tringle is Not a valid tringle");
+    }
+    return 0;
+}#include<stdio.h>
+int main()
+{
+	char gender;
+	int yos,qual,salary;
+	printf("Enter The Gender,Year of Service ,qualification(0=G,1=PG),Salary");
+	scanf("%c %d %d %d",&gender,&yos,&qual,&salary);
+	{
+	if(gender=='M'&&yos>=10&&qual=1)
+	salary=11000;
+	else if(gender=='M'&&yos>=10&&qual=0)||if(gender=='M'&&yos<10&&qual=1)
+	salary=10000;
+	else if(gender=='M'&&yos<10&&qual=0)
+	salary=7000;
+	if(gender=='F'&&yos>=10&&qual=1)
+	salary=12000;
+	else if(gender=='F'&&yos>=10&&qual=0)||if(gender=='F'&&yos<10&&qual=1)
+	salary=9000;
+	else if(gender=='F'&&yos<10&&qual=0)
+	salary=6000;
+	printf("The Salary of Emplyee is: %d",&salary)
+	}
+	return 0;
+}/*if a length of three sides of Triangle are entered through the keyboard,write a programe to cheak
+whether the tringle is valid or not The tringle if valid if the sum of two sides is grater
+than largest of three sides.*/
+#include<stdio.h>
+int main()
+{
+	int s1,s2,s3,largeside,sum;
+	printf("Enter The Three sides of tringle:");
+	scanf("%d %d %d",&s1,&s2,&s3);
+	if(s1>s2)
+	{
+		if(s1>s3)
+		{
+			sum=s2+s3;
+			largeside=s1;
+		}
+		else
+		{
+			sum=s1+s2;
+			largeside=s3;
+		}	
+	}
+	else 
+	{
+		if(s2>s3)
+		{
+		sum=s1+s2;
+		largeside=s2;
+		}
+		else
+		{
+		sum=s1+s2;
+		largeside=s3;
+		}
+	}
+	if(sum>largeside)
+	{
+		printf("Tringle is Valid tringle");
+	}
+	else
+	{
+		printf("Tringle is not a valid Tringle");
+	}
+	return 0;
+	
+}/*write a programe to claculate the overtime pay 10 employee. Overtime is paid at the
+rate of Rs.120 per hour for every our worked avobe 40 hours. Assume that employees do
+not work for fractorial part of an hour.*/
+#include<stdio.h>
+int main()
+{
+	float overpay;
+	int hour,i=1;
+	while(i<=10)
+	{
+		printf("Enter The Work Hours:");
+		scanf("%d",&hour);
+		if(hour>=40)
+		overpay=(hour-40)*120;
+		else 
+		overpay=0;
+		printf("The over hour:%d\nTime paid:%f\n",hour,overpay);
+		i++;
+	}
+	return 0;
+ } 
+#include<stdio.h>
+int main()
+{
+    int hour,overpay,implyee=1;
+    if(implyee<=40)
+    {
+    printf("Enter The Total Work Hour\n");
+    scanf("%d",&hour);
+    }
+    if(40<=hour)
+    {
+        overpay=(hour-40)*120;
+    }
+    else
+    {
+        overpay=0;
+    }
+    printf("Hours is:%d and overtime pay is:%d",hour,overpay);
+    i++;
+    
+    
+}/*Any year is input through the Keybord.write a programe to determine whether the the is leap
+year or not.*/
+#include<stdio.h>
+int main()
+{
+    int year;
+    printf("Enter The Year:");
+    scanf("%d",&year);
+    if(year%400==0)
+    {
+        printf("Year is leap Year");
+    }
+    if(year%100==0)
+    {
+        printf("Year is not a Leap Year");
+    }
+    if(year%4==0)
+    {
+        printf("Year is Leap Year");
+    }
+    return 0;
+}#include<stdio.h>
+int main()
+{
+    int age1,age2,age3; 
+    printf("Enter the age of Ram:");
+    scanf("%d",&age1);
+    printf("Enter The age of Shyam:");
+    scanf("%d",&age2);
+    printf("Enter The age of Ajay:");
+    scanf("%d",&age3);
+    if(age1<=age2)
+        
+        if(age1<=age3)
+        {
+        printf("Ram is Youngest Brother!!!");
+        }
+        else{
+            printf("Ajay is Youngest Brother!!!");
+      }  
+    else
+    if(age2<=age3)
+    {
+        printf("Shyam is Youngest Brother!!!");
+    }
+    else
+        {
+         printf("Ajay is Youngest Brother!!!");
+        }
+    return 0;
+}
+//Number is Prime Or Not//
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    printf("Enter The Number:");
+    scanf("%d",&n);
+    for(i=2;i<n;i++)
+    {
+        if(n%i==0)
+        {
+            printf("Not Prime");
+        break;
+        }
+    }
+    if(n==i)
+    {
+        printf("prime");
+    }
+   
+    return 0;
+}
