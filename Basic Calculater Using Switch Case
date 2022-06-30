@@ -1,0 +1,47 @@
+//make a basic calcutor in c language.
+#include<stdio.h>
+int main()
+{
+    int choice,a,b,c;
+    printf("chose any one following choice:\n");
+    printf("1.For addition purpose:\n");
+    printf("2.For suptaction purpose:\n");
+    printf("3.For multipliucation purpose:\n");
+    printf("4.For addition purpose:\n");
+    printf("\n\nEnter You choice: ");
+    scanf("%d",&choice);
+    switch (choice)
+    {
+    case 1: printf("Enter the frist number: ");
+            scanf("%d",&a);
+            printf("Enter the secound number: ");
+            scanf("%d",&b);
+            c=a+b;
+            printf("The sum of two number is: %d\n",c);
+            break;
+    case 2: printf("Enter the frist number: ");
+            scanf("%d",&a);
+            printf("Enter the secound number: ");
+            scanf("%d",&b);
+            c=a-b;
+            printf("The subraction of two number is: %d\n",c);
+            break;
+    case 3: printf("Enter the frist number: ");
+            scanf("%d",&a);
+            printf("Enter the secound number: ");
+            scanf("%d",&b);
+            c=a*b;
+            printf("The multiplay of two number is: %d\n",c);
+            break;
+    case 4: printf("Enter the frist number: ");
+            scanf("%d",&a);
+            printf("Enter the secound number: ");
+            scanf("%d",&b);
+            c=a/b;
+            printf("The division of two number is: %d\n",c);
+            break;
+    default:printf("invalid choice");
+            break;
+    }
+    return 0;
+}
